@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "py-test"
+version = "0.1.0"
+description = ""
+authors = ["Kutman"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
