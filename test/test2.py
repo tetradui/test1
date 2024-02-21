@@ -1,17 +1,42 @@
-users = {'Tim':'1234', 'Alex':'qwert', 'Sadyr':'654' } 
-def validate_password(func): 
-    def wrapper(username, password): 
-        if username not in users: 
-            print("Username is not defined") 
-            return 
-        elif users[username] != password: 
-            print("Password is invalid") 
-            return 
-        else: 
-            return func(username, password) 
-    return wrapper 
+products = [
+  {
+    'title': 'Samsung S10', 
+    'price': 800, 
+    'count': 6, 
+    'category': 'samsung'},
+  {
+    'title': 'iPhone 13 Pro', 
+    'price': 1200, 
+    'count': 9, 
+    'category': 'apple'},
+  {
+    'title': 'Xiaomi Mi 10', 
+    'price': 500, 
+    'count': 2, 
+    'category': 'xiaomi'},
+  {
+    'title': 'Samsung S9', 
+    'price': 600, 
+    'count': 4, 
+    'category': 'samsung'},
+  {
+    'title': 'iPhone 11', 
+    'price': 850, 
+    'count': 1, 
+    'category': 'apple'}
+] 
+def func23(list_,str_): 
+    res = list()
+    for i in list_: 
+        if str_.lower() == i['category'].lower():
+            res.append(i)
+    return res
+print(func23(products, 'apple'))
 
-@validate_password 
-def login(username, password): 
-    print(f'Welcome, {username}') 
-login('Tim','1234')
+# def func21(a:list,b:str)->list: 
+#     result=list() 
+#     for i in a: 
+#         if b.lower() == i['category'].lower(): 
+#             result.append(i) 
+#     return result
+# print(func21(products, 'apple'))
