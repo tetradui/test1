@@ -44,8 +44,49 @@
 '=---------------------------Контекстный менеджер----------------------='
 # with
 
-with open('test1.txt') as f:
-    print(f.read())
+# with open('test1.txt') as f:
+#     print(f.read())
     
-print(f.closed) # True - файл закрылся
+# print(f.closed) # True - файл закрылся
 
+
+'РЕЖИМЫ'
+#r+
+#w+
+#a+
+
+"r+ - ОТкрывает файл в режиме чтения + в режиме append(дозаписи)"
+# with open('test1.txt', 'r+') as file:
+#     print(file.read())
+#     file.write('py33')
+#     file.seek(0)
+#     print(file.read())
+
+
+"w+ - открывает файл в режиме записи + read(чтения)"
+# with open('test1.txt', 'w+') as file: 
+#     file.write('Jacob')
+#     file.seek(0)
+#     text = file.read()
+#     print(text)
+
+
+"a+ - открывает файл в режиме дозаписи(append) + в режиме чтения(read)"
+
+# with open('test1.txt', 'a+') as file: 
+#     file.write('\nEdward')
+#     file.seek(0)
+#     print(file.read())
+
+
+
+'++++++++++++++++++++++++++++++++CSV+++++++++++++++++++++++++++++++++++'
+# CSV - это формат файла 
+import csv 
+
+with open('data.csv') as file: 
+    data = csv.reader(file)
+    colm = next(data)
+    print('Колонка',colm)
+    for product in data:
+        print(product)
