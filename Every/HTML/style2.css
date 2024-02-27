@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #401010;
+}
+.name_car{
+    font-size: 60px;
+    color: aliceblue;
+    margin-left: 611px;
+    margin-top: 52px;
+}
+img{
+    margin-left: 480px;
+}
+
+.nav{
+    display: flex;
+    color: aliceblue;
+    margin: 20px;
+}
+
+h3{
+    margin-right: 10px;
+}
